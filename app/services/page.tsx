@@ -89,9 +89,7 @@ export default function Services() {
       <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Let's discuss your project</h2>
-          <Button asChild size="lg">
-            <Link href="/contact">Get in Touch</Link>
-          </Button>
+          <Button render={<Link href="/contact" />} size="lg">Get in Touch</Button>
         </div>
       </section>
     </div>

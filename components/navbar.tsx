@@ -20,14 +20,10 @@ export default function Navbar() {
           <Link href="/about" className="text-gray-600 hover:text-gray-900">
             About
           </Link>
-          <Button asChild>
-            <Link href="/contact">Get Started</Link>
-          </Button>
+          <Button render={<Link href="/contact" />}>Get Started</Button>
         </div>
         <div className="md:hidden">
-          <Button asChild variant="outline" size="sm">
-            <Link href="/contact">Contact</Link>
-          </Button>
+          <Button render={<Link href="/contact" />} variant="outline" size="sm">Contact</Button>
         </div>
       </div>
     </nav>
