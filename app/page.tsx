@@ -14,8 +14,12 @@ export default function Home() {
             We build beautiful, custom websites and applications tailored to your business needs. From concept to launch, we've got you covered.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button render={<Link href="/contact" />} size="lg">Get Started</Button>
-            <Button render={<Link href="/demo" />} variant="outline" size="lg">See Example</Button>
+            <Button asChild size="lg">
+              <Link href="/contact">Get Started</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/demo">See Example</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -54,7 +58,9 @@ export default function Home() {
           <p className="text-lg mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help your business with custom web development.
           </p>
-          <Button render={<Link href="/contact" />} variant="secondary" size="lg">Schedule a Consultation</Button>
+          <Button asChild variant="secondary" size="lg">
+            <Link href="/contact">Schedule a Consultation</Link>
+          </Button>
         </div>
       </section>
     </div>

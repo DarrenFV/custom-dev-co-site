@@ -226,7 +226,9 @@ export default function Demo() {
           <h2 className="text-3xl font-bold mb-6">
             Ready to build something for your business?
           </h2>
-          <Button render={<a href="/contact" />} variant="secondary" size="lg">Let's Talk</Button>
+          <Button asChild variant="secondary" size="lg">
+            <a href="/contact">Let's Talk</a>
+          </Button>
         </div>
       </section>
     </div>
