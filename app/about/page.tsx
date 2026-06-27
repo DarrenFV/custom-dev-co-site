@@ -1,128 +1,142 @@
+import { CheckCircle2 } from "lucide-react";
+
 export default function About() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">
+      <section className="bg-gray-950 text-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            About Custom Dev Co
+          <p className="text-xs font-semibold uppercase tracking-widest text-violet-400 mb-4">About us</p>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 max-w-2xl">
+            We build things that actually work.
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl">
-            We're passionate about building custom web solutions that help local businesses grow.
+          <p className="text-lg text-gray-400 max-w-xl leading-relaxed">
+            Custom Dev Co is a web development studio based in Westerham, UK. We work with local
+            businesses to build custom websites and apps that solve real problems.
           </p>
         </div>
       </section>
 
       {/* Mission */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-          <p className="text-lg text-gray-600 mb-6">
-            At Custom Dev Co, we believe that every business deserves a web presence that truly reflects their quality and values. We're dedicated to building custom web solutions that go beyond templates and off-the-shelf tools.
-          </p>
-          <p className="text-lg text-gray-600 mb-6">
-            Whether you're a salon looking to streamline bookings, a restaurant wanting to offer online ordering, or a retail business expanding into e-commerce, we work with you to understand your unique needs and build a solution that actually solves your problems.
-          </p>
-          <p className="text-lg text-gray-600">
-            We're local to the Westerham area and take pride in building long-term relationships with our clients. We don't just build and disappear—we're here to support you after launch.
-          </p>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12">Why Choose Us</h2>
-          <div className="grid md:grid-cols-2 gap-12">
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h3 className="text-xl font-bold mb-3">Custom Solutions</h3>
-              <p className="text-gray-600">
-                We build solutions tailored specifically to your business. No generic templates, no one-size-fits-all approach.
-              </p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-violet-600 mb-4">Our mission</p>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-6">
+                Every business deserves a web presence that works.
+              </h2>
             </div>
-            <div>
-              <h3 className="text-xl font-bold mb-3">Local Support</h3>
-              <p className="text-gray-600">
-                Based in Westerham, we're accessible and responsive to our clients. We're here when you need us.
+            <div className="space-y-5 text-gray-500 leading-relaxed">
+              <p>
+                We believe that great software shouldn't be reserved for big companies with big budgets.
+                Every local business — salons, restaurants, retailers, service providers — deserves a
+                web presence that truly reflects their quality and values.
               </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-3">Modern Technology</h3>
-              <p className="text-gray-600">
-                We use the latest technologies to build fast, secure, and scalable web solutions.
+              <p>
+                We go beyond templates. Whether you need to streamline bookings, take orders online,
+                or just look great on the web, we work with you to build a solution that actually
+                solves your problems.
               </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-3">Long-term Partnership</h3>
-              <p className="text-gray-600">
-                We provide ongoing support, maintenance, and improvements. Your success is our success.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-3">Transparent Communication</h3>
-              <p className="text-gray-600">
-                We keep you informed throughout the entire process. No surprises, no hidden costs.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-3">Proven Track Record</h3>
-              <p className="text-gray-600">
-                Check out our portfolio to see the real results we've delivered for other businesses.
+              <p>
+                We're local to Westerham and take pride in building long-term relationships with our
+                clients. We're not done when the site goes live.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Why us */}
+      <section className="py-20 md:py-28 bg-gray-50 border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16">
+            <p className="text-xs font-semibold uppercase tracking-widest text-violet-600 mb-4">Why us</p>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
+              What makes us different.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Custom solutions",
+                desc: "No generic templates or one-size-fits-all approaches. Everything is built specifically for your business.",
+              },
+              {
+                title: "Local and accessible",
+                desc: "Based in Westerham — we're a phone call or short drive away. Real people, not a faceless agency.",
+              },
+              {
+                title: "Modern tech",
+                desc: "We use the latest technologies to build fast, secure, and scalable solutions that stand the test of time.",
+              },
+              {
+                title: "Long-term partnership",
+                desc: "We provide ongoing support, maintenance, and improvements. Your success is how we measure ours.",
+              },
+              {
+                title: "No surprises",
+                desc: "Clear communication, transparent pricing, and honest timelines throughout the entire project.",
+              },
+              {
+                title: "Proven results",
+                desc: "Real projects, real outcomes. Check our portfolio to see what we've built for businesses like yours.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="flex gap-4">
+                <CheckCircle2 className="h-5 w-5 text-violet-600 shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Process */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-12">Our Process</h2>
-          <div className="space-y-8">
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-blue-600 text-white font-bold">
-                1
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16">
+            <p className="text-xs font-semibold uppercase tracking-widest text-violet-600 mb-4">How it works</p>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
+              Our process.
+            </h2>
+          </div>
+          <div className="space-y-12">
+            {[
+              {
+                step: "01",
+                title: "Discovery & Planning",
+                desc: "We start by understanding your business, goals, and what you actually need. We ask the right questions to make sure we build exactly the right thing.",
+              },
+              {
+                step: "02",
+                title: "Design & Development",
+                desc: "We create a modern, user-friendly design and build a robust solution using current best practices — fast, secure, and scalable.",
+              },
+              {
+                step: "03",
+                title: "Testing & Launch",
+                desc: "We thoroughly test across devices and browsers, then launch with confidence. All the technical details are handled for you.",
+              },
+              {
+                step: "04",
+                title: "Support & Growth",
+                desc: "After launch, we provide ongoing support, maintenance, and help you iterate. We're invested in your continued success.",
+              },
+            ].map((item, i) => (
+              <div key={item.step} className="flex gap-8 items-start">
+                <div className="shrink-0 w-12 text-right">
+                  <span className="text-sm font-bold text-gray-200">{item.step}</span>
+                </div>
+                <div className="flex-1 pb-12 border-b border-gray-100 last:border-0 last:pb-0">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-gray-500 leading-relaxed max-w-2xl">{item.desc}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Discovery & Planning</h3>
-                <p className="text-gray-600">
-                  We start by understanding your business, goals, and specific needs. We'll ask the right questions to ensure we build exactly what you need.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-blue-600 text-white font-bold">
-                2
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Design & Development</h3>
-                <p className="text-gray-600">
-                  We create a modern, user-friendly design and build a robust, scalable solution using the latest web technologies.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-blue-600 text-white font-bold">
-                3
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Testing & Launch</h3>
-                <p className="text-gray-600">
-                  We thoroughly test everything and launch your site with confidence. We handle all the technical details.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-lg bg-blue-600 text-white font-bold">
-                4
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Support & Growth</h3>
-                <p className="text-gray-600">
-                  After launch, we provide ongoing support, maintenance, and help you optimize for continued success.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

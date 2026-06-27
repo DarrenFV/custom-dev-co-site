@@ -5,30 +5,25 @@ import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   return (
-    <nav className="border-b border-gray-200 bg-white sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <Link href="/" className="font-bold text-xl">
+    <nav className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <Link href="/" className="font-bold text-lg tracking-tight text-gray-900">
           Custom Dev Co
         </Link>
-        <div className="hidden md:flex gap-8 items-center">
-          <Link href="/services" className="text-gray-600 hover:text-gray-900">
+        <div className="hidden md:flex items-center gap-8">
+          <Link href="/services" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
             Services
           </Link>
-          <Link href="/portfolio" className="text-gray-600 hover:text-gray-900">
+          <Link href="/portfolio" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
             Portfolio
           </Link>
-          <Link href="/about" className="text-gray-600 hover:text-gray-900">
+          <Link href="/about" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
             About
           </Link>
-          <Button asChild>
-            <Link href="/contact">Get Started</Link>
-          </Button>
         </div>
-        <div className="md:hidden">
-          <Button asChild variant="outline" size="sm">
-            <Link href="/contact">Contact</Link>
-          </Button>
-        </div>
+        <Button asChild size="sm">
+          <Link href="/contact">Get Started</Link>
+        </Button>
       </div>
     </nav>
   );
