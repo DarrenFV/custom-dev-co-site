@@ -6,25 +6,38 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gray-950 text-white py-24 md:py-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/60 mb-8">
-            <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
+      <section className="relative bg-[#0A0A0B] text-white py-28 md:py-44 overflow-hidden">
+        {/* Dot grid */}
+        <div
+          className="absolute inset-0 opacity-[0.18]"
+          style={{
+            backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
+          }}
+        />
+        {/* Glow blobs */}
+        <div className="absolute -top-48 left-1/3 w-[700px] h-[700px] bg-violet-600/20 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-sm text-white/50 mb-10">
+            <span className="h-1.5 w-1.5 rounded-full bg-violet-400 shrink-0" />
             Custom-built for local businesses
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-6 max-w-4xl">
-            Websites & apps{" "}
-            <span className="text-white/30">built properly.</span>
+          <h1 className="text-5xl sm:text-6xl md:text-[82px] font-bold tracking-tight leading-[1.03] mb-8 max-w-5xl">
+            Websites & apps
+            <br />
+            <span className="text-white/20">built properly.</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-xl leading-relaxed">
-            We build beautiful, fast, custom web solutions for local businesses.
-            From a simple site to a complex app — made for what you actually need.
+          <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-lg leading-relaxed">
+            Beautiful, fast, custom web solutions for local businesses —
+            from a simple site to a complex app.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3">
             <Button
               asChild
               size="lg"
-              className="bg-white text-gray-900 hover:bg-gray-100 font-semibold"
+              className="bg-white text-gray-900 hover:bg-gray-100 font-semibold h-12 px-6 rounded-xl"
             >
               <Link href="/contact">
                 Start a project <ArrowRight className="ml-2 h-4 w-4" />
@@ -34,7 +47,7 @@ export default function Home() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white/15 text-white hover:bg-white/10 hover:text-white bg-transparent"
+              className="bg-transparent border-white/15 text-white hover:bg-white/10 hover:text-white h-12 px-6 rounded-xl"
             >
               <Link href="/portfolio">See our work</Link>
             </Button>
@@ -42,19 +55,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="border-b border-gray-100 bg-white">
+      {/* Stats bar */}
+      <section className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-gray-100 rounded-2xl overflow-hidden">
             {[
               { number: "20+", label: "Projects delivered" },
               { number: "100%", label: "Client satisfaction" },
               { number: "5+", label: "Years experience" },
               { number: "24h", label: "Avg. response time" },
             ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-3xl font-bold tracking-tight text-gray-900">{stat.number}</p>
-                <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
+              <div key={stat.label} className="bg-white py-8 text-center">
+                <p className="text-4xl font-bold tracking-tight text-gray-900">{stat.number}</p>
+                <p className="text-sm text-gray-400 mt-1.5">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -62,44 +75,43 @@ export default function Home() {
       </section>
 
       {/* What we offer */}
-      <section className="py-24 md:py-32 bg-white">
+      <section className="py-28 md:py-36 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
-            <p className="text-xs font-semibold uppercase tracking-widest text-violet-600 mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-violet-600 mb-5">
               What we do
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
-              Everything you need,
-              <br />
-              <span className="text-gray-400">nothing you don't.</span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+              Everything you need,{" "}
+              <span className="text-gray-300">nothing you don't.</span>
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-5">
             {[
               {
                 icon: Globe,
                 title: "Web Development",
-                desc: "Modern, responsive websites built with the latest tech. Perfect for salons, shops, restaurants, and service-based businesses.",
+                desc: "Modern, responsive websites built for your business. Perfect for salons, shops, restaurants, and service providers.",
               },
               {
                 icon: Zap,
                 title: "Custom Applications",
-                desc: "Tailored web apps designed to solve your specific business problems — booking systems, dashboards, portals, and more.",
+                desc: "Tailored web apps for your specific workflows — booking systems, dashboards, member portals, and more.",
               },
               {
                 icon: HeartHandshake,
                 title: "Ongoing Support",
-                desc: "We don't just build and disappear. Maintenance, updates, and support to keep your site running at its best.",
+                desc: "We don't just build and disappear. Maintenance, updates, and support whenever you need it.",
               },
             ].map((item) => (
               <div
                 key={item.title}
-                className="p-8 rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-200"
+                className="group p-8 rounded-2xl border border-gray-100 hover:border-violet-100 hover:shadow-xl hover:shadow-violet-500/5 transition-all duration-300"
               >
-                <div className="h-10 w-10 rounded-xl bg-violet-50 flex items-center justify-center mb-6">
+                <div className="h-11 w-11 rounded-xl bg-violet-50 group-hover:bg-violet-100 flex items-center justify-center mb-6 transition-colors duration-300">
                   <item.icon className="h-5 w-5 text-violet-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -107,27 +119,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it works */}
-      <section className="py-24 md:py-32 bg-gray-50 border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Process — dark section */}
+      <section className="relative bg-[#0A0A0B] text-white py-28 md:py-36 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[120px]" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
-            <p className="text-xs font-semibold uppercase tracking-widest text-violet-600 mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-violet-400 mb-5">
               The process
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
-              Simple from start to finish.
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              Simple from start{" "}
+              <span className="text-white/20">to finish.</span>
             </h2>
           </div>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-10">
             {[
-              { step: "01", title: "Discovery", desc: "We learn your business, goals, and what you actually need." },
-              { step: "02", title: "Design", desc: "Clean, modern designs built around your brand and customers." },
-              { step: "03", title: "Build & Launch", desc: "Fast, tested, and deployed. We handle everything technical." },
-              { step: "04", title: "Support", desc: "Ongoing help and improvements after launch. Always here." },
+              { step: "01", title: "Discovery", desc: "We learn your business, your goals, and exactly what you need." },
+              { step: "02", title: "Design", desc: "Clean, modern designs built around your brand and your customers." },
+              { step: "03", title: "Build & Launch", desc: "Fast, tested, and deployed. Every technical detail handled for you." },
+              { step: "04", title: "Support", desc: "Ongoing help, updates, and improvements long after launch day." },
             ].map((item) => (
-              <div key={item.step}>
-                <p className="text-4xl font-bold text-gray-100 mb-4">{item.step}</p>
-                <h3 className="text-base font-semibold text-gray-900 mb-2">{item.title}</h3>
+              <div key={item.step} className="group">
+                <p className="text-6xl font-bold text-white/[0.06] mb-6 tabular-nums">{item.step}</p>
+                <h3 className="text-base font-semibold text-white mb-2">{item.title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
               </div>
             ))}
@@ -136,18 +152,22 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gray-950 text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Ready to build something?
+      <section className="relative bg-[#0A0A0B] text-white py-28 md:py-36 overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 opacity-[0.12]" style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-violet-600/20 rounded-full blur-[100px]" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 max-w-2xl mx-auto">
+            Ready to build something great?
           </h2>
-          <p className="text-gray-400 text-lg mb-10 max-w-md mx-auto">
-            Tell us about your project. We'll get back to you within 24 hours.
+          <p className="text-gray-400 text-lg mb-10 max-w-sm mx-auto">
+            Tell us about your project. We'll respond within 24 hours.
           </p>
           <Button
             asChild
             size="lg"
-            className="bg-white text-gray-900 hover:bg-gray-100 font-semibold"
+            className="bg-white text-gray-900 hover:bg-gray-100 font-semibold h-12 px-8 rounded-xl"
           >
             <Link href="/contact">Schedule a free consultation</Link>
           </Button>

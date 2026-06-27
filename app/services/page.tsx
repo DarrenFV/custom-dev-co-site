@@ -57,8 +57,9 @@ export default function Services() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gray-950 text-white py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-[#0A0A0B] text-white py-20 md:py-28 overflow-hidden">
+        <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-violet-400 mb-4">Services</p>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 max-w-2xl">
             What we build.

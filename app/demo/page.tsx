@@ -9,13 +9,15 @@ export default function Demo() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            See What We Can Build
+      <section className="relative bg-[#0A0A0B] text-white py-20 md:py-28 overflow-hidden">
+        <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-violet-400 mb-4">Live demo</p>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 max-w-2xl">
+            See what we can build.
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl">
-            This is an example of a modern website built by Custom Dev Co. Imagine this for your business.
+          <p className="text-lg text-gray-400 max-w-xl leading-relaxed">
+            Explore real examples of what your business could look like. Imagine this, but yours.
           </p>
         </div>
       </section>
@@ -28,7 +30,7 @@ export default function Demo() {
               onClick={() => setActiveTab("website")}
               className={`px-6 py-2 font-medium border-b-2 transition-colors ${
                 activeTab === "website"
-                  ? "border-blue-600 text-blue-600"
+                  ? "border-violet-600 text-violet-600"
                   : "border-transparent text-gray-600 hover:text-gray-900"
               }`}
             >
@@ -38,7 +40,7 @@ export default function Demo() {
               onClick={() => setActiveTab("app")}
               className={`px-6 py-2 font-medium border-b-2 transition-colors ${
                 activeTab === "app"
-                  ? "border-blue-600 text-blue-600"
+                  ? "border-violet-600 text-violet-600"
                   : "border-transparent text-gray-600 hover:text-gray-900"
               }`}
             >
@@ -129,7 +131,7 @@ export default function Demo() {
                       <p className="text-sm text-gray-600 mb-3">
                         Fresh, authentic pizzas made with quality ingredients
                       </p>
-                      <button className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+                      <button className="text-violet-600 hover:text-violet-700 font-medium text-sm">
                         View Menu →
                       </button>
                     </div>
@@ -139,7 +141,7 @@ export default function Demo() {
                       <p className="text-sm text-gray-600 mb-3">
                         Fresh garden and specialty salads
                       </p>
-                      <button className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+                      <button className="text-violet-600 hover:text-violet-700 font-medium text-sm">
                         View Menu →
                       </button>
                     </div>
@@ -149,7 +151,7 @@ export default function Demo() {
                       <p className="text-sm text-gray-600 mb-3">
                         Chef's special dishes and appetizers
                       </p>
-                      <button className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+                      <button className="text-violet-600 hover:text-violet-700 font-medium text-sm">
                         View Menu →
                       </button>
                     </div>
@@ -159,7 +161,7 @@ export default function Demo() {
                       <p className="text-sm text-gray-600 mb-3">
                         Sweet treats and fresh baked goods
                       </p>
-                      <button className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+                      <button className="text-violet-600 hover:text-violet-700 font-medium text-sm">
                         View Menu →
                       </button>
                     </div>
@@ -221,12 +223,15 @@ export default function Demo() {
       </section>
 
       {/* CTA */}
-      <section className="bg-blue-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">
+      <section className="relative bg-[#0A0A0B] text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-600/15 rounded-full blur-[100px]" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
             Ready to build something for your business?
           </h2>
-          <Button asChild variant="secondary" size="lg">
+          <Button asChild size="lg" className="bg-white text-gray-900 hover:bg-gray-100 font-semibold">
             <a href="/contact">Let's Talk</a>
           </Button>
         </div>
